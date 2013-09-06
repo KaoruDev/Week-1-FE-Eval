@@ -1,0 +1,208 @@
+/********IMPORT LATO FONT**********/
+@import url(http://fonts.googleapis.com/css?family=Lato:900|Tienne:700);
+
+/***** RESETTING MARGINS, PADDING ********/
+ul, body, html{
+	padding: 0;
+	margin: 0;
+}
+
+/*********** STYLE START ************/
+body{
+	background: #777 url(background.jpg) repeat top left;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.topContainer{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: white;
+	z-index: 100;
+}
+
+.topRestraint{
+	width:940px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.topContainer nav{
+	list-style: none;
+	float: right;
+	font-family: Arial;
+}
+
+.topContainer nav ul li{
+	display: inline-block;
+	font-size: .9em;
+	padding: 20px;
+	margin: 0;
+}
+
+.topContainer nav ul li:hover{
+	background-color: #1b1b1d;
+	color: white;
+}
+
+.topContainer img{
+	margin: 10px;
+	float: left;
+}
+
+/************* MAIN BODY STYLES *****************/
+
+.mainContainer{
+	margin: 100px auto 0;
+	padding: 0 20px;
+	width: 940px;
+}
+
+.title{
+	font-family: 'Lato', sans-serif;
+	color: white;
+}
+
+.title:before{
+	content: " ";
+	display: inline-block;
+	width: 5px;
+	height: 0.8em;
+	background-color: #EC4849;
+	margin-right: 5px;
+}
+
+.portContainer img{
+	margin: 15px 0px;
+}
+
+.arrowbox{
+	background-color: #1b1b1d;
+	display:block;
+	width: 30px;
+	height: 30px;
+	padding: 0px;
+	margin: 0;
+
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	-web-kit-border-radius: 2px;
+
+	position:fixed;
+	bottom:0;
+	right: 10;
+	text-align: center
+}
+
+.arrowbox span{
+	font-size: 1.4em;
+	color: white;
+	font-family: "Tienne", san-serif;
+	font-weight: 400;
+}
+
+/******** MEDIA QUERIES!!! ******/
+
+@media all and (min-width: 940px){
+	.topContainer{
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background: white;
+		z-index: 100;
+	}
+
+	.topContainer nav{
+		list-style: none;
+		float: right;
+		font-family: Arial;
+		text-align: right;
+	}
+
+	.topContainer nav ul li{
+		display: inline-block;
+		font-size: .9em;
+		padding: 20px;
+		margin: 0;
+	}
+
+	.topRestraint{
+		width: 940px;
+	}
+
+	.mainContainer{
+		margin-top: 100px;
+	}
+
+}
+
+@media all and (max-width: 939px) and (min-width: 788px){
+	.topContainer nav{
+		float: right;
+		text-align: right;
+	}
+
+	.topRestraint{
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 788px) and (min-width: 578px){
+	.topContainer nav{
+		float: right;
+		text-align: right;
+	}
+
+	.topRestraint{
+		width: 100%;
+	}
+
+	.mainContainer{
+		margin-top: 130px;
+	}
+}
+
+@media all and (max-width: 577px) and (min-width: 400px){
+	.topContainer{
+		position: static;
+		padding-top: 10px;
+	}
+
+	.topContainer nav{
+		float: none;
+		text-align: center;
+	}
+
+	.topContainer nav ul li{
+		display: block;
+		padding: 5px;
+
+		border-radius: 0px;
+		-moz-border-radius: 0px;
+		-web-kit-border-radius: 0px;
+	}
+
+
+	.topContainer img{
+		margin: 0 auto;
+		display: block ;
+		float: none;
+	}
+
+	.topContainer nav ul li a{
+		font-size: 2em;
+	}
+
+	.topRestraint{
+		width: 100%;
+		padding: 0;
+	}
+
+	.mainContainer{
+		margin-top: 10px;
+	}
+}
